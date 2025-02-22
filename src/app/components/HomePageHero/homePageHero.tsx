@@ -1,7 +1,11 @@
+'use client'
 import Image from 'next/image'
 import React from 'react'
 import { DownloadIcon, Send } from 'lucide-react'
 import Link from 'next/link'
+import { motion } from 'framer-motion'
+import { itemVariants } from '@/app/utils/framer-motion/variant'
+
 const homePageHero = () => {
 	return (
 		<div className='home-page-hero-wrapper flex justify-between items-center w-full p-4'>
@@ -37,36 +41,44 @@ const homePageHero = () => {
 					</div>
 					<div className='text-gray-500 text-xl'>specializing in building exceptional digital experiences</div>
 				</div>
-				<div className="buttons flex gap-4 mt-8">
+				<div className="buttons flex gap-6 mt-8">
 					<Link href='https://drive.google.com/file/d/17CoUh5PZgfSWqsaM7wmFPRJts2r6D8Ix/view?usp=sharing'
 						target='_blank'
 					>
-						<button
+						<motion.button
+							variants={itemVariants}
 							className='relative border border-primary rounded-full px-8 py-2 group'
+							whileHover={{ scale: 1.1 }}
+							whileTap={{ scale: 0.98 }}
 						>
 							{/* <span className='absolute inset-0 rounded-full border border-gray-300 group-hover:border-transparent group-hover:bg-gradient-to-r from-blue-500 to-blue-500 bg-[length:200%_100%] group-hover:animate-border-running'></span> */}
 							<div className='flex items-center gap-2 group'>
-								<DownloadIcon 
+								<DownloadIcon
 									className='w-4 h-4 group-hover:animate-bounce'
-									style={{ color: "#3b82f6" }}
+									style={{ color: "var(--primary-blue)" }}
 								/>
 								<span className='text-primary text-md font-bold'>
 									{`Download Resume`}
 								</span>
 							</div>
-						</button>
+						</motion.button>
 					</Link>
 					<Link href='/contact-me'>
-						<button className='border border-primary rounded-full px-8 py-2'>
+						<motion.button
+							variants={itemVariants}
+							className='border border-primary rounded-full px-8 py-2'
+							whileHover={{ scale: 1.1 }}
+							whileTap={{ scale: 0.98 }}
+						>
 							<div className='flex items-center gap-2 group'>
 								<span className='text-primary text-md font-bold'>
 									{`Contact Me`}
 								</span>
-								<Send className='w-4 h-4 group-hover:animate-bounce' 
-									style={{ color: "#3b82f6" }}
+								<Send className='w-4 h-4 group-hover:animate-bounce'
+									style={{ color: "var(--primary-blue)" }}
 								/>
 							</div>
-						</button>
+						</motion.button>
 					</Link>
 				</div>
 			</div>
