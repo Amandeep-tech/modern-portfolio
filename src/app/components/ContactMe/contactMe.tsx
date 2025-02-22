@@ -50,25 +50,25 @@ export default function ContactMe() {
           variants={itemVariants}
           type="text"
           placeholder="Name"
-          className="p-2 rounded border"
+          className="p-2 rounded border dark:bg-dark-background-secondary dark:border-gray-700"
         />
         <motion.input
           variants={itemVariants}
           type="email"
           placeholder="Email"
-          className="p-2 rounded border"
+          className="p-2 rounded border dark:bg-dark-background-secondary dark:border-gray-700"
         />
         <motion.textarea
           variants={itemVariants}
           placeholder="Message"
-          className="p-2 rounded border h-32"
+          className="p-2 rounded border h-32 dark:bg-dark-background-secondary dark:border-gray-700"
         />
         <motion.button
           variants={itemVariants}
           whileHover={{ scale: 1.02 }}
           whileTap={{ scale: 0.98 }}
           type="submit"
-          className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 transition-colors"
+          className="bg-primary text-white py-2 px-4 rounded hover:bg-primary/90 transition-colors"
         >
           Submit
         </motion.button>

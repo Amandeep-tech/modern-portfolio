@@ -6,7 +6,7 @@ export default function ContactMeLayout({
   children: React.ReactNode
 }) {
   return (
-    <section className="container mx-auto px-4">
+    <section className="">
       {children}
     </section>
   )
